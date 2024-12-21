@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Dealership FAQ</title>
+</head>
+<body>
+  <div class="faq-container">
+    <h1>Carrio Motors FAQ</h1>
+
+    <div class="faq-item">
+      <div class="faq-question">What financing options are available?</div>
+      <div class="faq-answer">
+        We offer several financing options, including low-interest loans and leasing plans. Contact our sales team for personalized offers.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you accept trade-ins?</div>
+      <div class="faq-answer">
+        Yes, we accept trade-ins! Bring your vehicle for an appraisal, and we’ll offer you a competitive value.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What warranties do you provide?</div>
+      <div class="faq-answer">
+        All our new cars come with a manufacturer warranty, and we also offer extended warranties for additional coverage.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I schedule a test drive online?</div>
+      <div class="faq-answer">
+        Absolutely! Visit our website's "Schedule Test Drive" section to book a convenient time.
+      </div>
+    </div>
+  </div>
+  <style>
+    body {
+      font-family:  sans-serif;
+      background-image: url(driving.png);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    .faq-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background:#050b20;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #fffbfb;
+    }
+    .faq-item {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-question {
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px 0;
+      position: relative;
+      font-family: sans-serif;
+      color: #fffbfb;
+    }
+    .faq-question:hover {
+      color: #0044cc;
+    }
+    .faq-question::after {
+      content: "+";
+      font-size: 20px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s;
+    }
+    .faq-answer {
+      display: none;
+      padding: 10px 0;
+      color: #f0ebeb;
+      font-family: sans-serif;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+    .faq-item.open .faq-question::after {
+      content: "-";
+      transform: rotate(45deg);
+    }
+    /* Breakpoints */
+
+/* Small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .contact-section h1 {
+        font-size: 2em;
+    }
+
+    .contact-section p {
+        font-size: 0.9em;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box, .message-box {
+        width: 90%;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .message-box input,
+    .message-box textarea {
+        font-size: 0.9em;
+    }
+
+    .message-box button {
+        font-size: 0.9em;
+    }
+}
+
+/* Medium devices (tablets, 576px to 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box, .message-box {
+        width: 80%;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .contact-section h1 {
+        font-size: 2.5em;
+    }
+
+    .contact-section p {
+        font-size: 1em;
+    }
+}
+
+/* Large devices (small laptops, 768px to 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+    .contact-info {
+        flex-direction: row;
+    }
+
+    .info-box {
+        width: 45%;
+    }
+
+    .message-box {
+        width: 55%;
+    }
+
+    .contact-section h1 {
+        font-size: 2.8em;
+    }
+
+    .contact-section p {
+        font-size: 1.1em;
+    }
+}
+
+/* Extra-large devices (large laptops and desktops, 992px and up) */
+@media (min-width: 992px) {
+    .contact-info {
+        flex-direction: row;
+    }
+
+    .info-box {
+        width: 40%;
+    }
+
+    .message-box {
+        width: 60%;
+    }
+
+    .contact-section h1 {
+        font-size: 3em;
+    }
+
+    .contact-section p {
+        font-size: 1.2em;
+    }
+}
+    </style> 
+    
+
+  <script>
+    // JavaScript for interactive FAQ toggling
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

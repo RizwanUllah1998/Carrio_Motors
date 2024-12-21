@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .brand-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .brand {
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .brand:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .brand img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .car-container {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .car {
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .car img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .car p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Popup Modal Styles */
+        .popup-modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .popup-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .popup-content h2 {
+            margin-top: 0;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Popup Modal Styles */
+.popup-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 80vh; /* Restrict the height of the popup */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative;
+    margin-top: -10px;
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Browse by Brand</h1>
+    <div class="brand-container">
+        <div class="brand" data-brand="Audi">
+            <img src="audi.jpg" alt="Audi">
+            <p>Audi</p>
+        </div>
+        <div class="brand" data-brand="BMW">
+            <img src="bmw.jpg" alt="BMW">
+            <p>BMW</p>
+        </div>
+        <div class="brand" data-brand="Ford">
+            <img src="ford.jpg" alt="Ford">
+            <p>Ford</p>
+        </div>
+        <div class="brand" data-brand="MercedesBenz">
+            <img src="mercidies ben.jpg" alt="Mercedes Benz">
+            <p>Mercedes Benz</p>
+        </div>
+        <div class="brand" data-brand="Peugeot">
+            <img src="peuogueot.webp" alt="Peugeot Logo">
+            <p>Peugeot</p>
+        </div>
+        <div class="brand" data-brand="Volkswagen">
+            <img src="volkswagen.jpg" alt="Volkswagen Logo">
+            <p>Volkswagen </p>
+        </div>
+    </div>
+
+    <h2 style="text-align: center;">Available Cars</h2>
+    <div class="car-container" id="carContainer">
+    </div>
+
+    <div id="carPopup" class="popup-modal">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2 id="carTitle"></h2>
+            <img id="carImage" src="" alt="">
+            <p><strong>Price:</strong> $<span id="carPrice"></span></p>
+            <p><strong>Year:</strong> <span id="carYear"></span></p>
+            <p><strong>Description:</strong> <span id="carDescription"></span></p>
+        </div>
+    </div>
+
+    <script>
+       
+        const cars = {
+            Audi: [
+                { name: "Audi A4", image: "audi a4.jpg", price: "30,000", year: "2022", description: "Luxury sedan with great performance." },
+                { name: "Audi Q5", image: "audi q5.jpg", price: "40,000", year: "2023", description: "SUV with advanced technology features." }
+            ],
+            BMW: [
+                { name: "BMW X5", image: "bmw x5.jpg", price: "50,000", year: "2023", description: "A sleek luxury SUV." },
+                { name: "BMW 3 Series", image: "bmw 3 series.webp", price: "40,000", year: "2022", description: "Compact luxury sedan with sporty feel." }
+            ],
+            Ford: [
+                { name: "Ford Mustang", image: "ford.jpg", price: "35,000", year: "2022", description: "Classic American muscle car." },
+                { name: "Ford F-150", image: "ford f150.jpg", price: "40,000", year: "2023", description: "Powerful pickup truck for heavy-duty tasks." }
+            ],
+            MercedesBenz: [
+                { name: "Mercedes C-Class", image: "mercidies c class.jpg", price: "45,000", year: "2023", description: "Stylish and comfortable luxury sedan." },
+                { name: "Mercedes GLE", image: "mercidies gle.webp", price: "60,000", year: "2023", description: "SUV with a blend of luxury and performance." }
+            ],
+            Peugeot: [
+                { name: "Peugeot 3008", image: "peuogueot.webp", price: "28,000", year: "2022", description: "Compact SUV with modern features." },
+                { name: "Peugeot 508", image: "1.2l.jpg", price: "32,000", year: "2023", description: "A stylish sedan with great fuel efficiency." }
+            ],
+            Volkswagen : [
+                { name: "Volkswagen Golf", image: "golf.jpg", price: "25,000", year: "2022", description: "Compact and efficient hatchback." },
+                { name: "Volkswagen ID.3", image: "id.3.jpg", price: "35,000", year: "2023", description: "Electric car with cutting-edge technology." }
+            ]
+        };
+
+        const brandCards = document.querySelectorAll('.brand');
+        const carContainer = document.getElementById('carContainer');
+
+        brandCards.forEach(brand => {
+            brand.addEventListener('click', () => {
+                const selectedBrand = brand.getAttribute('data-brand');
+                displayCars(selectedBrand);
+            });
+        });
+
+        function displayCars(brand) {
+            carContainer.innerHTML = '';
+
+            const selectedCars = cars[brand] || [];
+
+            if (selectedCars.length === 0) {
+                carContainer.innerHTML = `<p style="font-size: 18px; font-style: italic; color: gray;">No cars available for this brand.</p>`;
+                return;
+            }
+
+            selectedCars.forEach(car => {
+                const carCard = document.createElement('div');
+                carCard.classList.add('car');
+                carCard.innerHTML = `
+                    <img src="${car.image}" alt="${car.name}">
+                    <p>${car.name}</p>
+                `;
+                carCard.addEventListener('click', () => openPopup(car));
+                carContainer.appendChild(carCard);
+            });
+        }
+
+        function openPopup(car) {
+            document.getElementById('carTitle').textContent = car.name;
+            document.getElementById('carImage').src = car.image;
+            document.getElementById('carPrice').textContent = car.price;
+            document.getElementById('carYear').textContent = car.year;
+            document.getElementById('carDescription').textContent = car.description;
+            document.getElementById('carPopup').style.display = 'block';
+        }
+
+        // Close the popup
+        function closePopup() {
+            document.getElementById('carPopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

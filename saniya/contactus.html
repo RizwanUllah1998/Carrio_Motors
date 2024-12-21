@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1>CONTACT US</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel placerat justo. Nulla facilisi. Donec vehicula sem vel suscipit feugiat.</p>
+
+        <!-- Contact Info and Form -->
+        <div class="contact-info">
+            <div class="info-box">
+                <ul>
+                    <li><strong>Location:</strong> 2345 Elm St, San Francisco, CA 90222</li>
+                    <li><strong>Phone:</strong> (888) 123-4567</li>
+                    <li><strong>Email:</strong> info@carrio motors.com</li>
+                
+                </ul>
+            </div>
+            <div class="message-box">
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<style>
+   
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-image: url();
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .contact-section {
+        text-align: center;
+        padding: 40px;
+    }
+    
+    .contact-section h1 {
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+    
+    .contact-section p {
+        font-size: 1.2em;
+        max-width: 700px;
+        margin: auto;
+        color: #fffefe;
+    }
+    
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 40px auto;
+        max-width: 1000px;
+    }
+    
+    .info-box {
+        background: #050b20;
+        color: #fff;
+        padding: 20px;
+        width: 40%;
+        border-radius: 8px 0 0 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .message-box {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        width: 60%;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .message-box input,
+    .message-box textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+    }
+    
+    .message-box button {
+        padding: 10px 20px;
+        border: none;
+        background: #050b20;
+        color: #fff;
+        font-size: 1em;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .message-box button:hover {
+        background: #545aaf;
+    }
+    
+    /* Breakpoints */
+    
+    /* Small devices (phones, less than 576px) */
+    @media (max-width: 575.98px) {
+        .contact-section h1 {
+            font-size: 2em;
+        }
+    
+        .contact-section p {
+            font-size: 0.9em;
+        }
+    
+        .contact-info {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .info-box, .message-box {
+            width: 90%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+    
+        .message-box input,
+        .message-box textarea {
+            font-size: 0.9em;
+        }
+    
+        .message-box button {
+            font-size: 0.9em;
+        }
+    }
+    
+    /* Medium devices (tablets, 576px to 768px) */
+    @media (min-width: 576px) and (max-width: 768px) {
+        .contact-info {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .info-box, .message-box {
+            width: 80%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+    
+        .contact-section h1 {
+            font-size: 2.5em;
+        }
+    
+        .contact-section p {
+            font-size: 1em;
+        }
+    }
+    
+    /* Large devices (small laptops, 768px to 992px) */
+    @media (min-width: 768px) and (max-width: 992px) {
+        .contact-info {
+            flex-direction: row;
+        }
+    
+        .info-box {
+            width: 45%;
+        }
+    
+        .message-box {
+            width: 55%;
+        }
+    
+        .contact-section h1 {
+            font-size: 2.8em;
+        }
+    
+        .contact-section p {
+            font-size: 1.1em;
+        }
+    }
+    
+    /* Extra-large devices (large laptops and desktops, 992px and up) */
+    @media (min-width: 992px) {
+        .contact-info {
+            flex-direction: row;
+        }
+    
+        .info-box {
+            width: 40%;
+        }
+    
+        .message-box {
+            width: 60%;
+        }
+    
+        .contact-section h1 {
+            font-size: 3em;
+        }
+    
+        .contact-section p {
+            font-size: 1.2em;
+        }
+    }
+    </style>
+    
+</body>
+
+</html>

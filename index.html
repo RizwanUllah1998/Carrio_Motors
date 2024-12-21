@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrio Motors | Home Page</title>
+    
+    <link rel="stylesheet" href="homecss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="mediahome.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container" id="home">
+  
+  <div class="slideshow-container">
+    <div class="slideshow-bg">
+        <div class="slideshow-images">
+            <img src="imgs/miles-loewen-a0SRjVsk7Jg-unsplash.jpg" alt="Image 1">
+            <img src="imgs/kahl-orr-MPdl02hySb0-unsplash.jpg" alt="Image 2">
+            <img src="imgs/front-view-black-luxury-sedan-road.jpg" alt="Image 3">
+            <img src="imgs/raivis-razgals-ostLWBW4hsw-unsplash.jpg" alt="Image 4">
+        </div>
+  
+        <div class="overlay"></div>
+    </div>
+  
+    <button id="back-to-top" class="btn-top">⬆ Back to Top</button>
+
+    <div class="navbar">
+      <div class="logonav">
+          <img src="imgs/logo.png" alt="ok">
+      </div>
+  
+      <div class="hamburger" id="hamburger-icon">
+          &#9776; 
+      </div>
+  
+      <div class="navlinks" id="nav-links">
+          <a href="#abt">About us</a>
+          <a href="#faq">FAQ's</a>
+          <a href="#financing">Financing</a>
+          <a href="#Contact-Us">Contact</a>
+          <a href="#listings">Listings</a>
+          <a href="#testdrive">Test Drive</a>
+      </div>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById("hamburger-icon");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
+
+  
+    <div class="text-container">
+      <h4 class="dealer"> The World's Largest Car Dealership</h4><br>
+      <h1 class="carrio-hd"> Find Your Perfect Car. </h1><br>
+  
+      <form>
+      <div class="carsearch">
+        <div class="searchtext">
+            
+
+    
+        <p class="make">Brand: 
+          <select class="dropdown"> 
+            <option value="">Any Make</option>
+            <option value="Toyota">BMW</option>
+            <option value="Ford">Audi</option>
+            <option value="BMW">Hyundai</option>
+            <option value="Audi">Jeep</option>
+            <option value="Audi">Suzuki</option>
+            <option value="Audi">Kia</option>
+            <option value="Audi">Morris Garage</option>
+          </select>
+        </p>
+        
+        <p class="make">Year:
+          <select class="dropdown">
+            <option value="">Any Year</option>
+            <option value="">2000-2005</option>
+            <option value="Sedan">2005-2010</option>
+            <option value="SUV">2010-2015</option>
+            <option value="Hatchback">2010-2015</option>
+            <option value="Coupe">2020-present</option>
+          </select>
+        </p>
+        
+        <p class="make">Price: 
+          <select class="dropdown">
+            <option value="">Any Price</option>
+            <option value="0-5000">0 - 5,000</option>
+            <option value="5000-15000">5,000 - 15,000</option>
+            <option value="15000-30000">15,000 - 30,000</option>
+            <option value="30000+">30,000+</option>
+          </select>
+        </p>
+        <button class="perfset"><svg width="30" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d='M10 8.5h11m-18 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0m0 7h11m3 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0'/></svg><span class="more">More Settings</span></button>
+        <button class="search"> <span class="magnify"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d='M19 11.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0m-2.107 5.42 3.08 3.08'/></svg></span> <span class="srchtxt">Search cars</span> </button>
+
+      </div>
+    </div>
+
+    <div class="perfsetadj">
+      <div id="perf-settings" class="perf-settings">
+        <p class="performance">
+            <select class="dropdown">
+                <option value="">Any Engine</option>
+                <option value="V8">V8</option>
+                <option value="V6">V6</option>
+                <option value="Electric">Electric</option>
+            </select>
+        </p>
+        <p class="performance">
+            <select class="dropdown">
+                <option value="">Any Drivetrain</option>
+                <option value="AWD">AWD</option>
+                <option value="RWD">RWD</option>
+                <option value="FWD">FWD</option>
+            </select>
+        </p>
+        <p class="performance">
+          <select class="dropdown">
+              <option value="">Categeory</option>
+              <option value="AWD">Bus</option>
+              <option value="RWD">Car</option>
+              <option value="FWD">Trailer</option>
+              <option value="FWD">Truck</option>
+          </select>
+      </p>
+      <p class="performance">
+        <select class="dropdown">
+            <option value="">Type</option>
+            <option value="AWD">SUV</option>
+            <option value="RWD">Convertible</option>
+            <option value="FWD">Hatchback</option>
+            <option value="FWD">Coupe</option>
+            <option value="FWD">Sedan</option>
+            <option value="FWD">SUV</option>
+            <option value="FWD">Electric</option>
+        </select>
+    </p>
+    <p class="performance">
+      <select class="dropdown">
+          <option value="">Fuel Type</option>
+          <option value="AWD">Diesel</option>
+          <option value="RWD">Petrol</option>
+          <option value="FWD">Electric</option>
+          <option value="FWD">Hybrid</option>
+      </select>
+  </p>
+
+  <p class="performance">
+    <select class="dropdown">
+        <option value="">Tyre Type</option>
+        <option value="AWD">Performance</option>
+        <option value="RWD">All Season</option>
+        <option value="FWD">Off Road</option>
+        <option value="FWD">Any Type</option>
+    </select>
+</p>
+
+  <p class="performance">
+    <select class="dropdown">
+        <option value="">Cylinder</option>
+        <option value="AWD">10</option>
+        <option value="RWD">12</option>
+        <option value="FWD">4</option>
+        <option value="FWD">6</option>
+        <option value="FWD">8</option>
+    </select>
+</p>
+
+<p class="performance">
+  <select class="dropdown">
+      <option value="">Drive Type</option>
+      <option value="AWD">Front-Wheel drive</option>
+      <option value="RWD">Rear-Wheel drive</option>
+      <option value="FWD">All Wheel drive/ 4-wheel drive (AWD/4WD)</option>
+  </select>
+</p>
+
+<p class="performance">
+  <select class="dropdown">
+      <option value="">Transmission</option>
+      <option value="AWD">Automatic</option>
+      <option value="RWD">CVT</option>
+      <option value="FWD">DCT</option>
+      <option value="FWD">Manual</option>
+  </select>
+</p>
+
+<p class="performance">
+  <select class="dropdown">
+      <option value="">Door</option>
+      <option value="AWD">2 Doors</option>
+      <option value="RWD">4 Doors</option>
+      <option value="FWD">6 Doors</option>
+  </select>
+</p> 
+
+
+
+<input type="number" placeholder="VIT Number" class="vit"> 
+<h5 class="feature">Features:</h5> 
+        <p class="performance">
+            <input type="checkbox" id="sport" class="checkbox" />
+            <label for="sport">Sport Mode</label>
+        </p>
+        <p class="performance">
+            <input type="checkbox" id="turbo" class="checkbox" /> 
+            <label for="turbo">Turbocharged</label>
+        </p>
+        <p class="performance">
+            <input type="checkbox" id="brake" class="checkbox" /> 
+            <label for="brake">Brake Assist</label>
+        </p>
+        <p class="performance">
+          <input type="checkbox" id="heater" class="checkbox" /> 
+          <label for="heater">Heater/A.C</label>
+      </p>
+      <p class="performance">
+        <input type="checkbox" id="power" class="checkbox" /> 
+        <label for="power">Power Steering</label>
+      </p>
+       <p class="performance">
+        <input type="checkbox" id="meter" class="checkbox" /> 
+        <label for="meter">Tachometer</label>
+      </p>
+      <p class="performance">
+      <input type="checkbox" id="rear" class="checkbox" /> 
+      <label for="meter">Rear-Sensor</label>
+    </p>
+    <p class="performance">
+      <input type="checkbox" id="fog" class="checkbox" /> 
+      <label for="fog">Fog Lights Front</label>
+  </p>
+  <p class="performance">
+    <input type="checkbox" id="digital" class="checkbox" /> 
+    <label for="digital">Digital Odometer</label>
+</p>
+
+<p class="performance">
+  <input type="checkbox" id="lock" class="checkbox" /> 
+  <label for="lock">Anti-lock Braking</label>
+</p>
+
+<p class="performance">
+  <input type="checkbox" id="child-lock" class="checkbox" /> 
+  <label for="child-lock">Child-lock</label>
+</p>
+
+<p class="performance">
+  <input type="checkbox" id="sun" class="checkbox" /> 
+  <label for="sun">Sun-Roof</label>
+</p>
+
+<p class="performance">
+  <input type="checkbox" id="Stability" class="checkbox" /> 
+  <label for="Stability">Stability Control</label>
+</p>
+  
+    </div>
+
+      </form>
+       <br><br><br>
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+   <div class="browse">
+     <br><br><br>
+    <div class="text-perf">
+      <h1 class="explore"> Browse By Type. </h1>
+    </div>
+    <div class="imgscars">
+      <div class="cartypeimgs">
+        <img src="imgs/Suv.png" alt="a" class="suv">
+        <img src="imgs/sedan.png" alt="b" class="suv">
+        <img src="imgs/hatchback.png" alt="c" class="suv" id="suv2">
+        <img src="imgs/hybrid.png" alt="d" class="suv" id="suv2">
+        <img src="imgs/convertible.png" alt="e" class="suv3">
+    
+      </div>
+    </div>
+    
+
+  </div> <br><br>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .brand-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .brand {
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .brand:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .brand img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .car-container {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .car {
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .car img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .car p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .popup-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            margin-top: 50px;
+        }
+        .popup-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .popup-content h2 {
+            margin-top: 0;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Browse by Brand</h1>
+    <div class="brand-container">
+        <div class="brand" data-brand="Audi">
+            <img src="audi.jpg" alt="Audi">
+            <p>Audi</p>
+        </div>
+        <div class="brand" data-brand="BMW">
+            <img src="bmw.jpg" alt="BMW">
+            <p>BMW</p>
+        </div>
+        <div class="brand" data-brand="Ford">
+            <img src="ford.jpg" alt="Ford">
+            <p>Ford</p>
+        </div>
+        <div class="brand" data-brand="MercedesBenz">
+            <img src="mercidies ben.jpg" alt="Mercedes Benz">
+            <p>Mercedes Benz</p>
+        </div>
+        <div class="brand" data-brand="Peugeot">
+            <img src="peuogueot.webp" alt="Peugeot Logo">
+            <p>Peugeot</p>
+        </div>
+        <div class="brand" data-brand="Volkswagen">
+            <img src="volkswagen.jpg" alt="Volkswagen Logo">
+            <p>Volkswagen </p>
+        </div>
+    </div>
+
+    <h2 style="text-align: center;">Available Cars</h2>
+    <div class="car-container" id="carContainer"></div>
+
+    <div id="carPopup" class="popup-modal">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2 id="carTitle"></h2>
+            <img id="carImage" src="" alt="">
+            <p><strong>Price:</strong> $<span id="carPrice"></span></p>
+            <p><strong>Year:</strong> <span id="carYear"></span></p>
+            <p><strong>Description:</strong> <span id="carDescription"></span></p>
+        </div>
+    </div>
+
+    <script>
+        const cars = {
+            Audi: [
+                { name: "Audi A4", image: "audi a4.jpg", price: "30,000", year: "2022", description: "Luxury sedan with great performance." },
+                { name: "Audi Q5", image: "audi q5.jpg", price: "40,000", year: "2023", description: "SUV with advanced technology features." }
+            ],
+            BMW: [
+                { name: "BMW X5", image: "bmw x5.jpg", price: "50,000", year: "2023", description: "A sleek luxury SUV." },
+                { name: "BMW 3 Series", image: "bmw 3 series.webp", price: "40,000", year: "2022", description: "Compact luxury sedan with sporty feel." }
+            ],
+            Ford: [
+                { name: "Ford Mustang", image: "ford.jpg", price: "35,000", year: "2022", description: "Classic American muscle car." },
+                { name: "Ford F-150", image: "ford f150.jpg", price: "40,000", year: "2023", description: "Powerful pickup truck for heavy-duty tasks." }
+            ],
+            MercedesBenz: [
+                { name: "Mercedes C-Class", image: "mercidies c class.jpg", price: "45,000", year: "2023", description: "Stylish and comfortable luxury sedan." },
+                { name: "Mercedes GLE", image: "mercidies gle.webp", price: "60,000", year: "2023", description: "SUV with a blend of luxury and performance." }
+            ],
+            Peugeot: [
+                { name: "Peugeot 3008", image: "peuogueot.webp", price: "28,000", year: "2022", description: "Compact SUV with modern features." },
+                { name: "Peugeot 508", image: "1.2l.jpg", price: "32,000", year: "2023", description: "A stylish sedan with great fuel efficiency." }
+            ],
+            Volkswagen : [
+                { name: "Volkswagen Golf", image: "golf.jpg", price: "25,000", year: "2022", description: "Compact and efficient hatchback." },
+                { name: "Volkswagen ID.3", image: "id.3.jpg", price: "35,000", year: "2023", description: "Electric car with cutting-edge technology." }
+            ]
+        };
+
+        const brandCards = document.querySelectorAll('.brand');
+        const carContainer = document.getElementById('carContainer');
+
+        brandCards.forEach(brand => {
+            brand.addEventListener('click', () => {
+                const selectedBrand = brand.getAttribute('data-brand');
+                displayCars(selectedBrand);
+            });
+        });
+
+        function displayCars(brand) {
+            carContainer.innerHTML = '';
+
+            const selectedCars = cars[brand] || [];
+
+            if (selectedCars.length === 0) {
+                carContainer.innerHTML = `<p style="font-size: 18px; font-style: italic; color: gray;">No cars available for this brand.</p>`;
+                return;
+            }
+
+            selectedCars.forEach(car => {
+                const carCard = document.createElement('div');
+                carCard.classList.add('car');
+                carCard.innerHTML = `
+                    <img src="${car.image}" alt="${car.name}">
+                    <p>${car.name}</p>
+                `;
+                carCard.addEventListener('click', () => openPopup(car));
+                carContainer.appendChild(carCard);
+            });
+        }
+
+        function openPopup(car) {
+            document.getElementById('carTitle').textContent = car.name;
+            document.getElementById('carImage').src = car.image;
+            document.getElementById('carPrice').textContent = car.price;
+            document.getElementById('carYear').textContent = car.year;
+            document.getElementById('carDescription').textContent = car.description;
+            document.getElementById('carPopup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('carPopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+
+  
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h1 {
+            font-size: 2.5rem;
+            color: #050b20;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .about-section img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .about-section .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 30px 30px;
+            border: 2px solid #ddd;
+        }
+
+        .team-member h3 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .team-member p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .about-section h1 {
+                font-size: 2rem;
+            }
+
+            .about-section p {
+                font-size: 1rem;
+            }
+
+            .team {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-section {
+                padding: 20px 10px;
+            }
+
+            .about-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-section p {
+                font-size: 0.9rem;
+            }
+
+            .team-member {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+    <section class="about-section" id="abt">
+        <h1>About Us</h1>
+        <p>Welcome to XYZ Car Dealership! We are passionate about providing our customers with a wide variety of high-quality vehicles, exceptional customer service, and an unforgettable buying experience. Whether you're looking for your first car or your next upgrade, we are here to help you find the perfect match.</p>
+        
+        
+
+        <div class="team">
+            <div class="team-member">
+                <img src="imgs/team1.PNG" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Sales Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="imgs/team2.PNG" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Customer Service Specialist</p>
+            </div>
+            <div class="team-member">
+                <img src="imgs/team3.PNG" alt="Team Member 3">
+                <h3>Neveah Wilson </h3>
+                <p>Vehicle Expert</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 2nd section end -->
+
+    <div class="loaninputs" id="financing">
+      <div class="loancalculator">
+        <div class="calculate">
+          <div class="caltext">
+            <h1 class="autoloan">Auto Loan Calculator</h1> 
+            <p class="loanp">Use this car payment calculator to estimate monthly 
+              payments on your next new or used auto loan.</p> <br>
+    
+            <div class="input-wrapper">
+              <span class="dollar-sign">$</span>
+              <input type="text" id="price" placeholder="Price">
+            </div>
+    
+            <div class="input-wrapper">
+              <input type="text" id="interest" placeholder="Interest">
+              <span class="percent-sign">%</span>
+            </div>
+            <br><br>
+    
+            <input type="text" id="loan-term" placeholder="Loan Term (years)">
+            <div class="input-wrapper">
+              <span class="dollar-sign">$</span>
+              <input type="text" id="down-payment" placeholder="Down Payment">
+            </div> <br><br>
+    
+            <button type="submit" class="btnloan"> 
+              Calculate 
+              <span class="uparrow">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                  <path d='M13 5h6m0 0v6m0-6L5 19'/>
+                </svg>
+              </span>
+            </button> <br>
+    
+            <div id="result"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="loan">
+      <div class="loanbg">
+        <div class="loanimgs">
+          <img src="imgs/Background.png" alt="loanbg" class="loancar">
+        </div>
+      </div>
+    </div>
+    
+    <style>
+      .input-wrapper {
+        position: relative;
+        display: inline-block;
+      }
+    
+      .dollar-sign, .percent-sign {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #333;
+      }
+    
+      .dollar-sign {
+        left: 13px;
+      }
+    
+      .percent-sign {
+        right: 10px; 
+      }
+    
+      input {
+        padding-left: 30px; 
+        padding-right: 30px; 
+        width: 200px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+    
+      .loancalculator {
+        transition: height 0.3s ease-in-out;
+      }
+    
+    
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
+    
+
+
+<div class="performancelink" id="Listings">
+  <div class="perftext">
+    <br><br><br><br>
+    <img src="imgs/search.svg.png" alt="search" class="searchcheck">
+    <h1 class="vehicles"> Search over 150,000 Vehicles.</h1> 
+    <p class="vehicles-2"> Choose from thousands of vehicles across the country, <br> directly from our website.</p> <br>
+  </div>
+
+  <div class="perfbtnlinks"> <br>
+    <button class="perfbtn"> Find cars by performance. </button>
+  </div>
+</div><br>
+<iframe src="saniya/project.html" frameborder="0" width="100%" height=2630vh scrolling="no"allowfullscreen id="listings"></iframe>
+<br>
+
+<iframe src="warda/reviews-phone.html" width="100%" height="870vh" frameborder="0" scrolling="no"></iframe>
+
+
+
+
+<div class="mapsite" id="Contact-Us">
+  <div class="openinghrs">
+    <div class="openinghrstxt">
+      <h1>Get In Touch</h1>
+      <p>contact our sales department</p>
+      <button class="mobile"> <span><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d='M16.286 3H7.714C6.768 3 6 3.806 6 4.8v14.4c0 .994.768 1.8 1.714 1.8h8.572c.947 0 1.714-.806 1.714-1.8V4.8c0-.994-.767-1.8-1.714-1.8M10.5 6h3'/></svg></span>+12 014 344 163 </button>
+      <p>Monday: 9:00 am - 5:00 pm</p> <br>
+      <p>Tuesday: 9:00 am - 5:00 pm </p> <br>
+      <p>Wednesday: 9:00 am - 5:00 pm</p> <br>
+      <p>Thursday: 9:00 am - 5:00 pm</p> <br>
+      <p>Friday: 9:00 am - 5:00 pm</p> <br>
+      <p>Saturday: 9:00 am - 5:00 pm</p> <br>
+      <p>Sunday: CLOSED</p>
+    </div>
+  </div>
+
+  <div class="map">
+    <iframe src="https://www.google.com/maps/d/embed?mid=14qLYM5JnRtfd2mQ5rYoBuwBVgX-lJYE&ehbc=2E312F&noprof=1" width="100%" height="540"></iframe>
+  </div>
+</div>
+
+<div class="testdrive" id="testdrive">
+  <div class="testdrivetxt">
+    <h1 class="tst">Schedule a test drive.</h1>
+    <h4 class="tst2">Book a test drive today!</h4><br><br>
+    <p class="tstp">Fill out the form below, and submit your request. <br> A Carrio Motors Retailer will contact you within 6 business hours to confirm your test drive.</p>
+  </div><br><br>
+  
+  <form>
+    
+    
+    <div class="details-container">
+      <div class="appointment-details">
+
+        <h4 class="tstcontact">Choose your model</h4>
+        <label for="carBrand">Choose Car Brand:</label><br>
+    <select class="carModel" onchange="updateCarModels()" class="nametst">
+        <option value="">Select Brand</option>
+        <option value="bmw">BMW</option>
+        <option value="audi">Audi</option>
+        <option value="hyundai">Hyundai</option>
+        <option value="jeep">Jeep</option>
+        <option value="suzuki">Suzuki</option>
+        <option value="kia">Kia</option>
+        <option value="mg">Morris Garage (MG)</option>
+        <option value="mercedes">Mercedes</option>
+    </select> <br><br>
+
+    <label for="carModel">Choose Car Model:</label> <br>
+    <select class="carModel">
+        <option value="">Select Model</option>
+    </select> <br>
+
+    
+
+    <br><br>
+
+        <h4 class="tstcontact">Appointment Details</h4><br><br>
+
+        <label for="nametst">Select a Date:</label><br>
+        <input type="date" placeholder="Select a Date" class="nametst" id="inputsdrive"><br><br>
+        <label for="nametst">Select a Preferred time:</label><br>
+        <input type="time" placeholder="Select a Preferred time" class="nametst" id="inputsdrive"><br>
+          <label for="tstcmnt">Type your comments</label><br>
+        <input type="text" placeholder="Enter up to 300 characters" class="tstcmnt" id="inputsdrive"><br><br>
+        <label for="tstcmnt">Enter Your Location</label><br>
+        <input type="text" placeholder="Enter your Location" class="tstloc" id="inputsdrive"><br><br>
+        
+        </label>
+      </div>
+
+      
+
+      <div class="contact-info">
+        <h4 class="tstcontact">Contact Info</h4><br><br>
+        <label for="nametst">First Name:</label><br>
+        <input type="text" placeholder="Your First Name" class="nametst" id="inputsdrive"><br><br>
+        <label for="nametst">Last Name:</label><br>
+        <input type="text" placeholder="Your Last Name" class="nametst" id="inputsdrive"><br><br>
+        <label for="zipcode">Zip Code *</label><br>
+        <input type="text" placeholder="ZIP Code" class="zipcode" id="inputsdrive"><br><br>
+        <label for="reach">How would you like to be reached?</label><br>
+        <select id="reachdrop">
+          <option value="">Email</option>
+          <option value="">Phone</option>
+          <option value="">SMS</option>
+        </select><br><br> 
+
+        <label for="tstemail">Enter Your Email</label><br>
+        <input type="email" placeholder="Your Email" class="tstemail" id="inputsdrive"><br><br>
+        <label for="tsttel">Phone</label><br>
+        <input type="tel" placeholder="1234567890" class="tstemail" id="inputsdrive"><br><br>
+        <p><b><i>By continuing, you accept our <u>Terms and Conditions</u> and <u>Privacy Policy</u>.</i></b></p>
+            
+      </div>
+    </div>
+    
+    <button class="requestbtn">Submit Request</button><br><br>
+  </form>
+</div>
+
+
+
+
+<iframe src="gallerysite.html" frameborder="0" width="100%" height="770vh" scrolling="no" class="gallery"></iframe>
+
+<div class="sitemap">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sitemap Image</title>
+    <style>
+  
+        .sitemap-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            text-align: center; 
+        }
+
+        .sitemap-container img {
+            max-width: 100%;  
+            height: auto;    
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        
+        @media (max-width: 768px) {
+            .sitemap-container {
+                width: 90%; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sitemap-container {
+                width: 95%; 
+            }
+
+            .sitemap-container img {
+                max-width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sitemap-container">
+        <h2>Site Map</h2>
+        <img src="imgs/sitemap.jpg" alt="Site Map">
+    </div>
+
+</body>
+</html>
+
+</div>
+
+
+    <!-- car models script -->
+    <script>
+    
+        const carData = {
+            bmw: ["X5", "3 Series", "M4", "i8", "7 Series", "X3"],
+            audi: ["A3", "Q5", "A4", "Q7", "A6", "RS5"],
+            hyundai: ["Elantra", "Santa Fe", "Tucson", "Kona", "Palisade", "Sonata"],
+            jeep: ["Wrangler", "Cherokee", "Grand Cherokee", "Renegade", "Compass"],
+            suzuki: ["Swift", "Vitara", "Baleno", "S-Cross", "Ertiga"],
+            kia: ["Sportage", "Sorento", "Stinger", "Seltos", "Optima"],
+            mg: ["Hector", "ZS EV", "Gloster", "Astor", "MG6"],
+            mercedes: ["A-Class", "C-Class", "E-Class", "S-Class", "GLA", "GLE"]
+        };
+
+        
+        function updateCarModels() {
+            const brandSelect = document.getElementById("carBrand");
+            const modelSelect = document.getElementById("carModel");
+
+         
+            const selectedBrand = brandSelect.value;
+
+           
+            modelSelect.innerHTML = '<option value="">Select Model</option>';
+
+           
+            if (selectedBrand && carData[selectedBrand]) {
+                carData[selectedBrand].forEach(model => {
+                    const option = document.createElement("option");
+                    option.value = model.toLowerCase().replace(/ /g, "-");  
+                    option.textContent = model;
+                    modelSelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+
+
+  </div>
+</div>
+
+
+<div class="faq-section" id="faq">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-button">1. What documents do I need to bring to schedule a test drive?</button>
+      <div class="accordion-content">
+        <p>To schedule a test drive, please bring your driver’s license, proof of insurance, and a valid credit card for verification purposes.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">2. Can I test drive a car without purchasing it?</button>
+      <div class="accordion-content">
+        <p>Yes! You are welcome to schedule a test drive even if you’re not ready to make a purchase. We encourage you to experience the vehicle before deciding.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">3. Do you offer financing options?</button>
+      <div class="accordion-content">
+        <p>Yes, we offer a variety of financing options. Our sales team will assist you in finding the best plan for your budget and needs.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">4. How long does a typical test drive last?</button>
+      <div class="accordion-content">
+        <p>A typical test drive lasts between 20 to 30 minutes, but we can customize the time based on your needs.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">5. What if I need to cancel or reschedule my test drive?</button>
+      <div class="accordion-content">
+        <p>If you need to cancel or reschedule your test drive, please contact us at least 24 hours in advance, and we will be happy to assist you.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+const accordionButtons = document.querySelectorAll(".accordion-button");
+
+
+accordionButtons.forEach(button => {
+  button.addEventListener("click", () => {
+   
+    const content = button.nextElementSibling;
+
+  
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+});
+
+</script>
+
+
+<div class="footer">
+  <div class="footerimg">
+      <img src="imgs/footer.png" alt="footer-logo" class="logo-footer">
+  </div>
+  <div class="footer-content">
+      <div class="footer-text-column-1"> 
+          <h5 class="footer-logo-text">Your Journey, our commitment <br> to quality.</h5><br>
+          <p class="designndevelop">Designed and Developed by Myra Irfan, <br> Warda Waqar and Saniya Hayat.</p>
+      </div>
+      
+      <div class="footer-text-column-2">
+          <h3 class="solutions"> <b>Quick Links</b></h3> <br><br>
+          <p>FAQ's</p><br>
+          <p>About us</p><br>
+          <p>Blog</p><br>
+          <p>Contact</p><br>
+          <p>Listings</p><br>
+          <p>Test Drive</p><br>
+          
+
+      </div>
+      
+      <div class="footer-text-column-3"> 
+          <h3 class="support"> <b>Brands </b></h3> <br><br>
+          <p>Audi</p><br>
+          <p>BMW</p><br>
+          <p>Hyundai</p><br>
+          <p>JEEP</p><br>
+          <p>Toyota</p><br>
+          <p>Suzuki</p><br>
+          <p>Kia</p><br>
+          <p>Mercedes-Benz</p><br>
+      </div>
+
+      <div class="footer-text-column-4">
+          <h3><b>Join Carrio Motors..</b></h3><br><br>
+          <p>Subscribe to our news letter for the latest<br> updates on fresh deals!</p><br>
+          <input type="email" placeholder="your-email@email.com" id="footer-input" required><br>
+          <button class="subscribe-btn" type="submit">Subscribe!</button>
+      </div>
+  </div>
+</div>
+
+
+</div>
+
+
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const perfSetButton = document.querySelector(".perfset");
+    const perfSettings = document.getElementById("perf-settings");
+
+    
+    perfSettings.style.display = "none";
+
+   
+    perfSetButton.addEventListener("click", (e) => {
+      e.preventDefault(); 
+      if (perfSettings.style.display === "none") {
+        perfSettings.style.display = "grid"; 
+      } else {
+        perfSettings.style.display = "none";  
+      }
+    });
+
+  
+    document.addEventListener("click", (e) => {
+      
+      if (!perfSettings.contains(e.target) && !perfSetButton.contains(e.target)) {
+        perfSettings.style.display = "none"; 
+      }
+    });
+  });
+</script>
+
+
+
+</script>
+<script>
+  document.querySelector('.btnloan').addEventListener('click', function() {
+    const price = parseFloat(document.getElementById('price').value);
+    const interest = parseFloat(document.getElementById('interest').value) / 100 / 12;
+    const loanTerm = parseFloat(document.getElementById('loan-term').value) * 12;
+    const downPayment = parseFloat(document.getElementById('down-payment').value);
+
+   
+    if (isNaN(price) || isNaN(interest) || isNaN(loanTerm) || isNaN(downPayment)) {
+      document.getElementById('result').innerHTML = 'Please enter valid numbers for all fields.';
+      document.querySelector('.loancalculator').style.height = 'auto';
+      return;
+    }
+
+    const loanAmount = price - downPayment;
+
+
+    const monthlyPayment = (loanAmount * interest) / (1 - Math.pow(1 + interest, -loanTerm));
+
+  
+    if (isFinite(monthlyPayment)) {
+      document.getElementById('result').innerHTML = `Your estimated monthly payment is: $${monthlyPayment.toFixed(2)}`;
+      
+      document.querySelector('.loancalculator').style.height = '450px';
+    } else {
+      document.getElementById('result').innerHTML = 'Invalid calculation. Please check your inputs.';
+      document.querySelector('.loancalculator').style.height = 'auto'; 
+    }
+  });
+</script>
+
+<script>
+
+window.addEventListener('scroll', function() {
+  const backToTopButton = document.getElementById('back-to-top');
+  if (window.scrollY > 200) { 
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+document.getElementById('back-to-top').addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+</script>
+
+
+
+</body>
+</html>
+     
